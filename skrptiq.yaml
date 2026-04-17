@@ -1,0 +1,42 @@
+# --- Identity ---
+id: "41adb99c-7405-412f-a0ff-d1e4084ada67"
+name: "usability-testing-pipeline"
+display_name: "Usability Testing Pipeline"
+description: "Plan usability tests, collect results via gate step, analyse findings, and produce prioritised recommendations"
+version: "1.0.0"
+engine: ">=1.0.0"
+
+# --- Attribution ---
+author:
+  name: "skrptiq"
+  url: "https://hub.skrptiq.ai"
+
+licence: "MIT"
+repository: "https://github.com/skrpts/usability-testing-pipeline"
+
+# --- Discovery (Hub) ---
+category: "designer"
+tags:
+  - "usability-testing"
+  - "ux-research"
+  - "gate-steps"
+  - "heuristic-evaluation"
+
+# --- Security & Access ---
+requires:
+  services:
+    - "llm-service"
+  permissions: []
+  data_handling:
+    - "pii"
+
+# --- Contents ---
+contents:
+  skills: 6
+  prompts: 6
+  workflows: 1
+  services: 1
+  sources: 0
+  documents: 0
+  assets: 0
+  total: 14
