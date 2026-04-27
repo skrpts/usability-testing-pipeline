@@ -32,17 +32,23 @@ composite_steps:
   - "consistency-check"
 execution:
   - skill: "test-planning"
+    prompt: "plan-tests"
     step_type: "generation"
   - skill: "test-execution"
+    prompt: "collect-test-results"
     step_type: "validation"
   - skill: "findings-analysis"
+    prompt: "analyse-findings"
     step_type: "synthesis"
   - skill: "recommendations-generation"
+    prompt: "generate-recommendations"
     step_type: "generation"
   - skill: "language-polish"
+    prompt: "polish-language"
     step_type: "content"
   - parallel:
     - skill: "consistency-check"
+      prompt: "check-consistency"
       step_type: "review"
 ---
 
