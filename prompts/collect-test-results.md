@@ -5,7 +5,7 @@ title: "Collect Test Results"
 description: "Gate prompt — pauses for user to run tests and paste results"
 tags: [Production, Gate, UX]
 connections:
-  - target: test-execution
+  - target: gate-test-results
     type: derived_from
 metadata:
   output_format: text

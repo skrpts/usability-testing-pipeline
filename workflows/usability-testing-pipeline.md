@@ -5,9 +5,9 @@ title: Usability Testing Pipeline
 description: "Plan usability tests, collect results via gate step, analyse findings, and produce prioritised recommendations"
 tags: [Production, Customer-Facing, UX, Testing, Gate]
 connections:
-  - target: test-planning
+  - target: plan-usability-tests
     type: uses
-  - target: test-execution
+  - target: gate-test-results
     type: uses
   - target: findings-analysis
     type: uses
@@ -24,17 +24,17 @@ metadata:
   trigger: manual
 output_step: "language-polish"
 composite_steps:
-  - "test-planning"
-  - "test-execution"
+  - "plan-usability-tests"
+  - "gate-test-results"
   - "findings-analysis"
   - "recommendations-generation"
   - "language-polish"
   - "consistency-check"
 execution:
-  - skill: "test-planning"
-    prompt: "plan-tests"
+  - skill: "plan-usability-tests"
+    prompt: "plan-usability-tests"
     step_type: "generation"
-  - skill: "test-execution"
+  - skill: "gate-test-results"
     prompt: "collect-test-results"
     step_type: "validation"
   - skill: "findings-analysis"
@@ -68,13 +68,13 @@ This workflow guides you through a complete usability testing cycle: plan tests,
 
 **Input:** Product description, test objectives, user segments, known issues
 
-Invoke the **test-planning** skill to produce test tasks, scenarios, success criteria, and an observation guide.
+Invoke the **plan-usability-tests** skill to produce test tasks, scenarios, success criteria, and an observation guide.
 
 **Output:** Complete test plan with 5-8 task scenarios.
 
 ### Stage 2: Test Execution (Gate Step)
 
-Execution **pauses** via the **test-execution** gate step. Run your usability tests using the generated plan, then paste your results — task completion data, observations, participant comments.
+Execution **pauses** via the **gate-test-results** gate step. Run your usability tests using the generated plan, then paste your results — task completion data, observations, participant comments.
 
 **Output:** Your test results, ready for analysis.
 
