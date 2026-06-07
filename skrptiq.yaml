@@ -1,9 +1,9 @@
 # --- Identity ---
-id: "41adb99c-7405-412f-a0ff-d1e4084ada67"
+id: "b0c07870-5e8c-4304-93a4-fb8491904d49"
 name: "usability-testing-pipeline"
 display_name: "Usability Testing Pipeline"
 description: "Plan usability tests, collect results via gate step, analyse findings, and produce prioritised recommendations"
-version: "1.0.13"
+version: "1.0.14"
 engine: ">=0.1.0"
 
 # --- Attribution ---
