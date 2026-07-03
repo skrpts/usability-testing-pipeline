@@ -3,7 +3,7 @@ id: "b0c07870-5e8c-4304-93a4-fb8491904d49"
 name: "usability-testing-pipeline"
 display_name: "Usability Testing Pipeline"
 description: "Plan usability tests, collect results via gate step, analyse findings, and produce prioritised recommendations"
-version: "1.0.14"
+version: "1.0.15"
 engine: ">=0.1.0"
 
 # --- Attribution ---
@@ -70,3 +70,17 @@ contents:
   documents: 0
   assets: 0
   total: 6
+
+security:
+  status: "pass"
+  scanned_at: "2026-07-03T11:11:18.394Z"
+  scanner_version: "3.3.0"
+  syntactic: "pass"
+  structural: "pass"
+  detected:
+    services: ["llm-service"]
+    permissions: []
+    data_handling: ["pii"]
+  undeclared: []
+  warnings: []
+  report_url: "https://hub.skrptiq.ai/skrpts/usability-testing-pipeline/security"

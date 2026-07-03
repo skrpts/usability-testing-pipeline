@@ -34,18 +34,23 @@ execution:
   - skill: "plan-usability-tests"
     prompt: "plan-usability-tests"
     step_type: "generation"
+    output: { name: "test_plan", type: "text" }
   - skill: "gate-test-results"
     prompt: "collect-test-results"
     step_type: "validation"
+    output: { name: "test_results", type: "text" }
   - skill: "findings-analysis"
     prompt: "analyse-findings"
     step_type: "synthesis"
+    output: { name: "findings", type: "text" }
   - skill: "recommendations-generation"
     prompt: "generate-recommendations"
     step_type: "generation"
+    output: { name: "recommendations", type: "text" }
   - skill: "language-polish"
     prompt: "polish-language"
     step_type: "content"
+    output: { name: "polished_report", type: "text" }
     context:
       voice_profile: "Neutral professional tone"
       grammar_strictness: "Professional"
@@ -53,6 +58,7 @@ execution:
     - skill: "consistency-check"
       prompt: "check-consistency"
       step_type: "review"
+      output: { name: "consistency_verdict", type: "decision" }
       context:
         voice_profile: "Neutral professional tone"
         consistency_strictness: "Standard"
