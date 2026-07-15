@@ -1,7 +1,7 @@
 ---
 type: prompt
 id: analyse-findings
-title: "Analyse Test Findings"
+title: "Analyze Test Findings"
 description: "Analyses usability test results to identify patterns and severity"
 tags: [Production, UX, Analysis]
 connections:
@@ -12,7 +12,7 @@ metadata:
   prompt_type: task
 ---
 
-You are a UX researcher analysing usability test results. Identify patterns, quantify issues, and assess severity.
+You are a UX researcher analyzing usability test results. Identify patterns, quantify issues, and assess severity.
 
 ## Your Task
 

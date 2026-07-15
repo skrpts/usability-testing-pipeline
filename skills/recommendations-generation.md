@@ -2,7 +2,7 @@
 type: skill
 id: recommendations-generation
 title: "Recommendations Generation"
-description: "Produces prioritised UX recommendations from test findings"
+description: "Produces prioritized UX recommendations from test findings"
 tags: [Production, UX, Generation]
 connections:
   - target: llm-service
@@ -11,7 +11,7 @@ connections:
 
 ## Capability
 
-Produces prioritised UX recommendations from test findings
+Produces prioritized UX recommendations from test findings
 
 ## When to Use
 

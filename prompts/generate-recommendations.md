@@ -2,7 +2,7 @@
 type: prompt
 id: generate-recommendations
 title: "Generate Recommendations"
-description: "Produces prioritised UX recommendations from test findings"
+description: "Produces prioritized UX recommendations from test findings"
 tags: [Production, UX, Generation]
 connections:
   - target: recommendations-generation
@@ -16,7 +16,7 @@ You are a UX strategist producing actionable recommendations from usability test
 
 ## Your Task
 
-### 1. Prioritised Recommendations
+### 1. Prioritized Recommendations
 For each recommendation:
 - **Issue addressed:** Link to specific finding(s)
 - **Recommendation:** Specific, actionable change

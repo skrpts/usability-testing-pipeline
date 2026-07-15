@@ -2,7 +2,7 @@
 type: workflow
 id: usability-testing-pipeline
 title: Usability Testing Pipeline
-description: "Plan usability tests, collect results via gate step, analyse findings, and produce prioritised recommendations"
+description: "Plan usability tests, collect results via gate step, analyze findings, and produce prioritized recommendations"
 tags: [Production, Customer-Facing, UX, Testing, Gate]
 connections:
   - target: plan-usability-tests
@@ -31,13 +31,13 @@ composite_steps:
   - "language-polish"
   - "consistency-check"
 execution:
-  - skill: "plan-usability-tests"
-    prompt: "plan-usability-tests"
+  - prompt: "plan-usability-tests"
     step_type: "generation"
     output: { name: "test_plan", type: "text" }
   - skill: "gate-test-results"
     prompt: "collect-test-results"
     step_type: "validation"
+    gate: true
     output: { name: "test_results", type: "text" }
   - skill: "findings-analysis"
     prompt: "analyse-findings"
@@ -66,7 +66,7 @@ execution:
 
 ## Overview
 
-This workflow guides you through a complete usability testing cycle: plan tests, run them, analyse findings, and produce prioritised recommendations. A **gate step** pauses the workflow for you to conduct actual tests and paste results, grounding the analysis in real user data.
+This workflow guides you through a complete usability testing cycle: plan tests, run them, analyze findings, and produce prioritized recommendations. A **gate step** pauses the workflow for you to conduct actual tests and paste results, grounding the analysis in real user data.
 
 ## Pipeline Stages
 
@@ -74,7 +74,7 @@ This workflow guides you through a complete usability testing cycle: plan tests,
 
 **Input:** Product description, test objectives, user segments, known issues
 
-Invoke the **plan-usability-tests** skill to produce test tasks, scenarios, success criteria, and an observation guide.
+Invoke the **plan-usability-tests** prompt to produce test tasks, scenarios, success criteria, and an observation guide.
 
 **Output:** Complete test plan with 5-8 task scenarios.
 
@@ -96,9 +96,9 @@ Invoke the **findings-analysis** skill to identify issues, quantify severity, an
 
 **Input:** Analysis from Stage 3
 
-Invoke the **recommendations-generation** skill to produce prioritised, actionable recommendations.
+Invoke the **recommendations-generation** skill to produce prioritized, actionable recommendations.
 
-**Output:** Prioritised recommendations with quick wins, strategic improvements, and re-test plan.
+**Output:** Prioritized recommendations with quick wins, strategic improvements, and re-test plan.
 
 ### Stage 5: Language Polish
 
@@ -127,7 +127,7 @@ Invoke **consistency-check** to verify findings and recommendations are consiste
 | Name | Description |
 |------|-------------|
 | Test plan | Tasks, scenarios, success criteria, observation guide |
-| Findings analysis | Prioritised issues with severity and evidence |
+| Findings analysis | Prioritized issues with severity and evidence |
 | Recommendations | Actionable improvements with effort estimates |
 
 ## Setup
